@@ -3,7 +3,7 @@ public class MagicDriver
     public static void main(String[] args)
     {
         //create an object
-        Dragon happy = new Dragon("Happy", 20, false, true);
+        Dragon happy = new Dragon("Happy", "green", 20, 200, 5, 12.4, false, true);
         Dragon nobody = new Dragon();
         //nobody.setName("Sad");
         //print out the object via toString
