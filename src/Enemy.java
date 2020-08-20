@@ -94,7 +94,7 @@ public abstract class Enemy
                 if (might < 2) {
                     damage += damageRoll(0, 2);
                 } else {
-                    damage += damageRoll(might - 2, might + 1);
+                    damage += damageRoll(might - 2, might + 2);
                 }
             }
             wait = 0;
