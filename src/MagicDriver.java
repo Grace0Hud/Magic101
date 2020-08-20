@@ -5,15 +5,15 @@ public class MagicDriver
     public static void main(String[] args)
     {
         //create an object
-        Dragon happy = new Dragon("Happy", "green", 20, 200, 5, 12.4, false, true);
+        Dragon happy = new Dragon("Happy", "green", 20, 200, 5, 12.4, false, true, 60.0);
         Dragon nobody = new Dragon();
         Slime george = new Slime("George", 10, 15, 6, 20.35, true, "blue", true);
         //Slime nobody2 = new Slime();
         Monster drac = new Monster("Drac", 15, 100, 5, 19.45, true, 3, "air");
         Monster nobody3 = new Monster();
         Monster somebody = new Monster(4);
-        System.out.println(nobody3.compareTerrain());
-
+        //System.out.println(nobody3.compareTerrain());
+        happy.setWingspan(-5);
         Enemy[] enemies = {happy, george, drac};
         for(Enemy e: enemies)
         {
