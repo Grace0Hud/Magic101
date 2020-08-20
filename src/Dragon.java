@@ -36,7 +36,7 @@ public class Dragon extends Enemy
     //brain methods
     public int fireBreath(int numTimes)
     {
-        if((hasFire) && (isHostile) && (wait == speed))
+        if(hasFire)
         {
             return attack(numTimes) + 10;
         }

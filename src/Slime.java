@@ -21,8 +21,32 @@ public class Slime extends Enemy
 
     //setters
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setPoisonous(boolean poisonous) {
+        isPoisonous = poisonous;
+    }
     //getters
 
+    public String getColor() {
+        return color;
+    }
+
+    public boolean isPoisonous() {
+        return isPoisonous;
+    }
+
+    //brain methods
+    public int poisonAttack(int numTimes)
+    {
+        if(isPoisonous)
+        {
+            return attack(numTimes) + 10;
+        }
+        return 0;
+    }
     //toString
     public String toString()
     {
