@@ -89,15 +89,18 @@ public abstract class Enemy
         int damage = 0;
         if((isHostile) && (wait == speed))
         {
-            if (might < 2) {
-                damage = damageRoll(0, 2);
-            } else {
-                damage = damageRoll(might - 2, might + 1);
+            for(int i = 0; i < numTimes; i++)
+            {
+                if (might < 2) {
+                    damage += damageRoll(0, 2);
+                } else {
+                    damage += damageRoll(might - 2, might + 1);
+                }
             }
             wait = 0;
         }
         return damage;
-    }
+    }//returns
     private int damageRoll(int min, int max)
     {
         return (int) ((Math.random() * (max - min)) + min);
