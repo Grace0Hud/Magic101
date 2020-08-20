@@ -33,7 +33,15 @@ public class Dragon extends Enemy
     public void setColor(String color) {
         this.color = color;
     }
-
+    //brain methods
+    public int fireBreath(int numTimes)
+    {
+        if((hasFire) && (isHostile) && (wait == speed))
+        {
+            return attack(numTimes) + 10;
+        }
+        return 0;
+    }
     //toString
     public String toString()
     {

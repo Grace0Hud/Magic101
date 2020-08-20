@@ -10,5 +10,8 @@ public class MagicDriver
         System.out.println(happy.toString());
         System.out.println(nobody.toString());
         //System.out.println("Nobody has been given a name! It's " + nobody.getName());
+        nobody.setMight(10);
+        happy.setHealth(happy.getHealth() - nobody.fireBreath(2));
+        System.out.println(nobody.getName() + " is attacking " + happy.getName() + "! " + happy.getName() + " now has : " + happy.getHealth() + " health");
     }//end main method
 }//end driver class
