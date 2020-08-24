@@ -15,11 +15,13 @@ public class MagicDriver
         //System.out.println(nobody3.compareTerrain());
         happy.setWingspan(-5);
         Enemy[] enemies = {happy, george, drac};
-        for(Enemy e: enemies)
+  /*      for(Enemy e: enemies)
         {
             System.out.println(e.toString());
             System.out.println();
         }
+
+   */
         //nobody.setName("Sad");
         //print out the object via toString
        // System.out.println(happy.toString());

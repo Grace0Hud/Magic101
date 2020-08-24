@@ -1,9 +1,11 @@
+import java.util.Scanner;
 public class Dragon extends Enemy
 {
     //instance variables
     boolean hasFire;
     String color;
     double wingspan;
+    Scanner scan = new Scanner(System.in);
     //constructors
     public Dragon(String name, String color, int might, int health, int movement, double speed, boolean isHostile, boolean hasFire, double wingspan)
     {
@@ -60,8 +62,7 @@ public class Dragon extends Enemy
         while(wingspan < 0)
         {
             System.out.println("You can't have negative wings. Try again.");
-                                        //cheat until allow scanner entry
-            wingspan++;
+            wingspan = scan.nextDouble();
         }
         return wingspan;
     }//end method to validate wingspan entry
