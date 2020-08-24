@@ -8,6 +8,7 @@ public abstract class Enemy
     double speed;
     int health;
     static double wait;
+    static int countEnemies = 0;
 //constructors
     public Enemy(String name, int might, int health, int movement, double speed, boolean isHostile)
     {
@@ -18,6 +19,7 @@ public abstract class Enemy
         this.speed = speed;
         wait = speed;
         this.isHostile = isHostile;
+        countEnemies++;
     }//end constructor
     public Enemy()
     {
@@ -28,6 +30,7 @@ public abstract class Enemy
         speed = 0.0;
         isHostile = true;
         wait = speed;
+        countEnemies++;
     }//end default costr
 
     //getters

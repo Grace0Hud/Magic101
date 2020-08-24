@@ -16,6 +16,7 @@ public class MagicDriver
         //System.out.println(nobody3.compareTerrain());
         //happy.setWingspan(-5);
 
+        System.out.printf("Watch out, there are %d enemies attacking %n%n", Enemy.countEnemies);
         //creating array lists
 
         ArrayList<Enemy> enemyList = new ArrayList<>();
