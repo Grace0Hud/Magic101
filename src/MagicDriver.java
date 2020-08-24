@@ -1,5 +1,5 @@
 import java.lang.reflect.Array;
-
+import java.util.ArrayList;
 public class MagicDriver
 {
     public static void main(String[] args)
@@ -9,12 +9,26 @@ public class MagicDriver
         Dragon nobody = new Dragon();
         Slime george = new Slime("George", 10, 15, 6, 20.35, true, "blue", true);
         //Slime nobody2 = new Slime();
-        Monster drac = new Monster("Drac", 15, 100, 5, 19.45, true, 3, "air");
+        //Monster drac = new Monster("Drac", 15, 100, 5, 19.45, true, 3, "air");
+        Monster beast = new Monster("beast", 10, 30, 4, 7, true, 4, "land");
         Monster nobody3 = new Monster();
         Monster somebody = new Monster(4);
         //System.out.println(nobody3.compareTerrain());
-        happy.setWingspan(-5);
-        Enemy[] enemies = {happy, george, drac};
+        //happy.setWingspan(-5);
+
+        //creating array lists
+
+        ArrayList<Enemy> enemyList = new ArrayList<>();
+        enemyList.add(happy);
+        enemyList.add(george);
+        enemyList.add(beast);
+        enemyList.add(nobody);
+
+        for(int i = 0; i < enemyList.size(); i++)
+        {
+            System.out.println(enemyList.get(i));
+        }
+        //Enemy[] enemies = {happy, george, beast};
   /*      for(Enemy e: enemies)
         {
             System.out.println(e.toString());
@@ -34,8 +48,8 @@ public class MagicDriver
         //nobody.setMight(10);
         //drac.setLevel(5);
         //System.out.println(drac.toString());
-        happy.setHealth(happy.getHealth() - drac.attack(2));
-        System.out.println(drac.getName() + " is attacking " + happy.getName() + "! " + happy.getName() + " now has : " + happy.getHealth() + " health");
+        happy.setHealth(happy.getHealth() - beast.attack(1));
+        System.out.println(beast.getName() + " is attacking " + happy.getName() + "! " + happy.getName() + " now has : " + happy.getHealth() + " health");
 
 
     }//end main method

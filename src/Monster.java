@@ -1,12 +1,13 @@
 public class Monster extends Enemy
 {
     //intstance variable
-    int level;
+    int level = 0;
     String terrain;
     //constructors
     public Monster(String name, int might, int health, int movement, double speed, boolean isHostile, int level, String terrain)
     {
         super(name, might, health, movement, speed, isHostile);
+        scale(level);
         this.level = level;
         this.terrain = terrain;
     }//end full constructor
@@ -22,7 +23,6 @@ public class Monster extends Enemy
     {
         super();
         this.terrain = "land";
-        level = 0;
     }//end default constructor
 
     //getter
