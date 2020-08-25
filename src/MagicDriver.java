@@ -87,6 +87,20 @@ public class MagicDriver
         System.out.println(george.getName() + " is attacking " + me.getName() + "! " + me.getName() + " now has : " + me.getHealth() + " health");
         System.out.println();
 
+        //Testing heal mechanic
+        me.setHealth(me.getHealth() + me.heal(2));
+        System.out.println("Me's health: " + me.getHealth());
+        System.out.println();
+
+        System.out.println("Healer's current health ; " + healer.getHealth());
+        healer.setHealth(healer.getHealth() + healer.heal(1));
+        System.out.println("Healer's health after healing themself: " + healer.getHealth());
+        System.out.println();
+
+
+
+
+
 
 
 

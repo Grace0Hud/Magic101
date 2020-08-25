@@ -1,3 +1,5 @@
+import javafx.scene.SceneAntialiasing;
+
 import java.util.ArrayList;
 public class Sorcerer
 {
@@ -50,7 +52,7 @@ public class Sorcerer
         inventory.add(startingWeapon);
         this.name = "Sam Smorkle";
         physMight = 0;
-        this.magicPower = 0;
+        this.magicPower = 2.4;
         health = 0;
         movement = 0;
         playerCount++;
@@ -149,7 +151,7 @@ public class Sorcerer
 
     private int additionalMagicDamage(String typeAttack)
     {
-        if(typeAttack.equalsIgnoreCase("magic"))
+        if(typeAttack.equalsIgnoreCase("magic") || typeAttack.equalsIgnoreCase("heal"))
         {
             double afterPoint = magicPower - (int)magicPower;
             afterPoint = afterPoint * 7;
@@ -157,6 +159,24 @@ public class Sorcerer
         }
         return 0;
     }//multiplies decimal portion of mp by 7 then casts as int
+
+    public int heal(int numtimes)
+    {
+        int total = 0;
+        if(hasHeal)
+        {
+            for (int i = 0; i < numtimes; i++)
+            {
+                total += (10 + additionalMagicDamage("heal"));
+            }//end for loop
+        }
+        else
+        {
+            System.out.println("This unit does not have the ability to heal.");
+        }
+        return total;
+    }//end heal method
+
     private int damageRoll(int min, int max)
     {
         return  (int)((Math.random() * (max - min)) + min);
