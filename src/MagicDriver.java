@@ -5,7 +5,7 @@ public class MagicDriver
     public static void main(String[] args)
     {
         //create an object
-        Dragon happy = new Dragon("Happy", "green", 20, 200, 5, 12.4, false, true, 60.0);
+        Dragon happy = new Dragon("Happy", "chromatic", 20, 200, 5, 12.4, false, true, 60.0);
         //Dragon nobody = new Dragon();
         Slime george = new Slime("George", 10, 15, 6, 20.35, true, "blue", true);
         //Slime nobody2 = new Slime();
@@ -60,7 +60,8 @@ public class MagicDriver
         //nobody.setMight(10);
         //drac.setLevel(5);
         //System.out.println(drac.toString());
-        george.setColor("purple");
+        //george.setColor("purple");
+        happy.setColor("green");
         //testing attack mechanic
 
        // happy.setHealth(happy.getHealth() - me.attack(1, "magic"));

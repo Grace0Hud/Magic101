@@ -9,7 +9,7 @@ public class Dragon extends Enemy
     {
         super(name, might, health, movement, speed, isHostile);
         this.hasFire = hasFire;
-        this.color = color;
+        this.color = checkColor(color);
         this.wingspan = validateWingspan(wingspan);
     }//end full constr
     public Dragon()
@@ -38,7 +38,7 @@ public class Dragon extends Enemy
     }
 
     public void setColor(String color) {
-        this.color = color;
+        this.color = checkColor(color);
     }
 
     public void setWingspan(double wingspan) {
@@ -64,6 +64,28 @@ public class Dragon extends Enemy
         }
         return wingspan;
     }//end method to validate wingspan entry
+
+    private String checkColor(String color)
+    {
+        boolean valid = false;
+        while(!valid)
+        {
+            if(color.equalsIgnoreCase("chromatic"))
+            {
+                valid = true;
+            }
+            else if(color.equalsIgnoreCase("metallic"))
+            {
+                valid = true;
+            }
+            else
+            {
+                System.out.println("Invalid color, please try again. (do not be specific, only state chromatic or metallic)");
+                color = scan.next();
+            }
+        }
+        return color;
+    }//checks for metallic or chromatic dragon
     //toString
     public String toString()
     {

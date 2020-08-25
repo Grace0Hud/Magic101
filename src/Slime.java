@@ -71,7 +71,7 @@ public class Slime extends Enemy
             }
         }
         return color;
-    }
+    }//end checkColor
     //toString
     public String toString()
     {
