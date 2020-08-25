@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public abstract class Enemy
 {
     //instance variables
@@ -9,6 +10,7 @@ public abstract class Enemy
     int health;
     static double wait;
     static int countEnemies = 0;
+    Scanner scan = new Scanner(System.in);
 //constructors
     public Enemy(String name, int might, int health, int movement, double speed, boolean isHostile)
     {

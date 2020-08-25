@@ -46,7 +46,8 @@ public class Slime extends Enemy
             return attack(numTimes) + 10;
         }
         return 0;
-    }
+    }//end poison attack
+
     //toString
     public String toString()
     {
