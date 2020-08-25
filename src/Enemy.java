@@ -92,7 +92,7 @@ public abstract class Enemy
     public int attack(int numTimes)
     {
         int damage = 0;
-        if((isHostile) && (wait == speed))
+        if((isHostile) && (wait == speed) && (health > 0))
         {
             for(int i = 0; i < numTimes; i++)
             {
@@ -103,6 +103,10 @@ public abstract class Enemy
                 }
             }
             wait = 0;
+        }
+        else
+        {
+            System.out.println(name + " is either not hostile or dead.");
         }
         return damage;
     }//returns

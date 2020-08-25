@@ -34,6 +34,9 @@ public class Monster extends Enemy
     public int getLevel() {
         return level;
     }
+    public String getTerrain() {
+        return terrain;
+    }
 
     //setters
     public void resetMonsterCount()
@@ -41,12 +44,16 @@ public class Monster extends Enemy
         monsterCount = 0;
     }
 
-
     public void setLevel(int level)
     {
         scale(level);
         this.level = level;
     }
+
+    public void setTerrain(String terrain) {
+        this.terrain = terrain;
+    }
+
 
     //brain methods
 
