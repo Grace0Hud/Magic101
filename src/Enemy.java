@@ -73,7 +73,7 @@ public abstract class Enemy
     }
 
     public void setHealth(int health) {
-        this.health = health;
+        this.health = checkHealth(health);
     }
 
     public void setHostile(boolean hostile) {
@@ -106,6 +106,15 @@ public abstract class Enemy
         }
         return damage;
     }//returns
+    private int checkHealth(int health)
+    {
+        if(health < 1)
+        {
+            health = 0;
+            System.out.println(name + " is dead.");
+        }
+        return health;
+    }//verifies that it charcaters are dead
     private int damageRoll(int min, int max)
     {
         return (int) ((Math.random() * (max - min)) + min);

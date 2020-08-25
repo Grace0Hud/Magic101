@@ -73,15 +73,19 @@ public class MagicDriver
 
         nobody.setHealth(nobody.getHealth() - me.attack(1, "magic"));
         System.out.println(me.getName() + " is attacking " + nobody.getName() + "! " + nobody.getName() + " now has : " + nobody.getHealth() + " health");
+        System.out.println();
 
         me.setHealth(me.getHealth() - nobody.fireBreath(1));
         System.out.println(nobody.getName() + " is attacking " + me.getName() + "! " + me.getName() + " now has : " + me.getHealth() + " health");
+        System.out.println();
 
         george.setHealth(george.getHealth() - me.attack(1, "magic"));
         System.out.println(me.getName() + " is attacking " + george.getName() + "! " + george.getName() + " now has : " + george.getHealth() + " health");
+        System.out.println();
 
         me.setHealth(me.getHealth() - george.poisonAttack(1));
         System.out.println(george.getName() + " is attacking " + me.getName() + "! " + me.getName() + " now has : " + me.getHealth() + " health");
+        System.out.println();
 
 
 
