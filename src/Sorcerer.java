@@ -92,6 +92,33 @@ public class Sorcerer
         return hasHeal;
     }
 
+    //setters
+    public void setName(String name)
+    {
+        this.name = name;
+    }//sets name
+
+    public void setPhysMight(int might)
+    {
+        this.physMight = might;
+    }
+
+    public void setMagicPower(double magicPower) {
+        this.magicPower = magicPower;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void setHeal(boolean hostile) {
+        hasHeal = hostile;
+    }
+
+    public void setMovement(int movement) {
+        this.movement = movement;
+    }
+    
     //to string
     public String toString()
     {
