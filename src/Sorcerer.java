@@ -93,6 +93,7 @@ public class Sorcerer
     }
 
     //setters
+
     public void setName(String name)
     {
         this.name = name;
@@ -118,7 +119,43 @@ public class Sorcerer
     public void setMovement(int movement) {
         this.movement = movement;
     }
-    
+
+    //Brain Methods
+
+    public int attack(int numTimes, String type)
+    {
+        //might can refer to magicPower or physMight depending on String type
+        int might = 0;
+        if(type.equalsIgnoreCase("magic"))
+        {
+            might = (int)magicPower;
+        }
+        else if(type.equalsIgnoreCase("physical"))
+        {
+            might = physMight;
+        }//type of attack
+        int damage = 0;
+            for(int i = 0; i < numTimes; i++)
+            {
+                    damage += damageRoll(might - 2, might + 2) + additionalMagicDamage(type);
+            }//rolls for damage a certain amount of times
+        return damage;
+    }//returns
+
+    private int additionalMagicDamage(String typeAttack)
+    {
+        if(typeAttack.equalsIgnoreCase("magic"))
+        {
+            double afterPoint = magicPower - (int)magicPower;
+            afterPoint = afterPoint * 7;
+            return (int)afterPoint;
+        }
+        return 0;
+    }//multiplies decimal portion of mp by 7 then casts as int
+    private int damageRoll(int min, int max)
+    {
+        return  (int)((Math.random() * (max - min)) + min);
+    }//rolls for an amount of damage between two
     //to string
     public String toString()
     {

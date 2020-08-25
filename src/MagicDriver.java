@@ -63,8 +63,8 @@ public class MagicDriver
 
         //testing attack mechanic
 
-        //happy.setHealth(happy.getHealth() - beast.attack(1));
-        //System.out.println(beast.getName() + " is attacking " + happy.getName() + "! " + happy.getName() + " now has : " + happy.getHealth() + " health");
+        happy.setHealth(happy.getHealth() - me.attack(1, "magic"));
+        System.out.println(me.getName() + " is attacking " + happy.getName() + "! " + happy.getName() + " now has : " + happy.getHealth() + " health");
 
 
     }//end main method
