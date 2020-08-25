@@ -114,7 +114,7 @@ public class Sorcerer
     }
 
     public void setHealth(int health) {
-        this.health = health;
+        this.health = checkHealth(health);
     }
 
     public void setHeal(boolean hostile) {
@@ -161,6 +161,15 @@ public class Sorcerer
     {
         return  (int)((Math.random() * (max - min)) + min);
     }//rolls for an amount of damage between two
+    private int checkHealth(int health)
+    {
+        if(health < 1)
+        {
+            health = 0;
+            System.out.println(name + " is dead.");
+        }
+        return health;
+    }//verifies that it charcaters are dead
     //to string
     public String toString()
     {
