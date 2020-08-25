@@ -6,7 +6,7 @@ public class MagicDriver
     {
         //create an object
         Dragon happy = new Dragon("Happy", "chromatic", 20, 200, 5, 12.4, false, true, 60.0);
-        //Dragon nobody = new Dragon();
+        Dragon nobody = new Dragon();
         Slime george = new Slime("George", 10, 15, 6, 20.35, true, "blue", true);
         //Slime nobody2 = new Slime();
         Monster drac = new Monster("Drac", 15, 100, 5, 19.45, true, 3, "air");
@@ -20,7 +20,8 @@ public class MagicDriver
         //happy.setWingspan(-5);
 
         //System.out.printf("Watch out, there are %d enemies attacking %n%n", Enemy.countEnemies);
-        //creating array lists
+
+        //Array list practice
 /*
         ArrayList<Enemy> enemyList = new ArrayList<>();
         enemyList.add(happy);
@@ -34,6 +35,9 @@ public class MagicDriver
         }
 
  */
+
+    //Array practice
+
         //Enemy[] enemies = {happy, george, beast};
   /*      for(Enemy e: enemies)
         {
@@ -60,12 +64,29 @@ public class MagicDriver
         //nobody.setMight(10);
         //drac.setLevel(5);
         //System.out.println(drac.toString());
+
+        //testing color validation
         //george.setColor("purple");
-        happy.setColor("green");
+        //happy.setColor("green");
+
         //testing attack mechanic
 
-       // happy.setHealth(happy.getHealth() - me.attack(1, "magic"));
-       // System.out.println(me.getName() + " is attacking " + happy.getName() + "! " + happy.getName() + " now has : " + happy.getHealth() + " health");
+        nobody.setHealth(nobody.getHealth() - me.attack(1, "magic"));
+        System.out.println(me.getName() + " is attacking " + nobody.getName() + "! " + nobody.getName() + " now has : " + nobody.getHealth() + " health");
+
+        me.setHealth(me.getHealth() - nobody.fireBreath(1));
+        System.out.println(nobody.getName() + " is attacking " + me.getName() + "! " + me.getName() + " now has : " + me.getHealth() + " health");
+
+        george.setHealth(george.getHealth() - me.attack(1, "magic"));
+        System.out.println(me.getName() + " is attacking " + george.getName() + "! " + george.getName() + " now has : " + george.getHealth() + " health");
+
+        me.setHealth(me.getHealth() - george.poisonAttack(1));
+        System.out.println(george.getName() + " is attacking " + me.getName() + "! " + me.getName() + " now has : " + me.getHealth() + " health");
+
+
+
+
+        //testing static variables
 
         System.out.println("There are " + Enemy.countEnemies + " enemies total.");
         System.out.println("Dragons: " + Dragon.dragonCount);
