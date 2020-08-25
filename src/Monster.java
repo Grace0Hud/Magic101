@@ -3,6 +3,7 @@ public class Monster extends Enemy
     //intstance variable
     int level = 0;
     String terrain;
+    static int monsterCount = 0;
     //constructors
     public Monster(String name, int might, int health, int movement, double speed, boolean isHostile, int level, String terrain)
     {
@@ -10,6 +11,7 @@ public class Monster extends Enemy
         scale(level);
         this.level = level;
         this.terrain = terrain;
+        monsterCount++;
     }//end full constructor
 
     public Monster(int level)
@@ -18,11 +20,13 @@ public class Monster extends Enemy
         scale(level);
         this.terrain = "land";
         this.level = level;
+        monsterCount++;
     }//creates default monster but scales up to level
     public Monster()
     {
         super();
         this.terrain = "land";
+        monsterCount++;
     }//end default constructor
 
     //getter
@@ -31,7 +35,12 @@ public class Monster extends Enemy
         return level;
     }
 
-    //setter
+    //setters
+    public void resetMonsterCount()
+    {
+        monsterCount = 0;
+    }
+
 
     public void setLevel(int level)
     {

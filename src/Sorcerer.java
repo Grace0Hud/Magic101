@@ -9,6 +9,7 @@ public class Sorcerer
     boolean hasHeal;
     String name;
     ArrayList<String> inventory = new ArrayList<>();
+    static int playerCount = 0;
     //constructors
     public Sorcerer(String name, int might, double magicMight, int health, int movement, boolean hasHeal, String startingWeapon)
     {
@@ -19,6 +20,7 @@ public class Sorcerer
         this.movement = movement;
         this.hasHeal = hasHeal;
         inventory.add(startingWeapon);
+        playerCount++;
     }//end of full constructor
     public Sorcerer()
     {
@@ -29,6 +31,7 @@ public class Sorcerer
         health = 0;
         movement = 0;
         inventory.add("shank");
+        playerCount++;
     }//end default constructor
     public Sorcerer(String name)
     {
@@ -39,6 +42,7 @@ public class Sorcerer
         health = 0;
         movement = 0;
         inventory.add("shank");
+        playerCount++;
     }//end constructor with only name different
     public Sorcerer(boolean hasHeal, String startingWeapon)
     {
@@ -49,6 +53,7 @@ public class Sorcerer
         this.magicPower = 0;
         health = 0;
         movement = 0;
+        playerCount++;
 
     }//constructor to create pure healer
 

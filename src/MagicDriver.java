@@ -67,6 +67,12 @@ public class MagicDriver
        // happy.setHealth(happy.getHealth() - me.attack(1, "magic"));
        // System.out.println(me.getName() + " is attacking " + happy.getName() + "! " + happy.getName() + " now has : " + happy.getHealth() + " health");
 
+        System.out.println("There are " + Enemy.countEnemies + " enemies total.");
+        System.out.println("Dragons: " + Dragon.dragonCount);
+        System.out.println("Slimes: " + Slime.slimeCount);
+        System.out.println("Monsters: " + Monster.monsterCount);
+
+        System.out.println("There are " + Sorcerer.playerCount + " players to resist them.");
 
     }//end main method
 }//end driver class

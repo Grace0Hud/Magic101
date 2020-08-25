@@ -3,6 +3,7 @@ public class Slime extends Enemy
     //instance vars
     String color;
     boolean isPoisonous;
+    static int slimeCount = 0;
 
     //constructors
     public Slime(String name, int might, int health, int movement, double speed, boolean isHostile, String color, boolean isPoisonous)
@@ -10,6 +11,7 @@ public class Slime extends Enemy
         super(name, might, health, movement, speed, isHostile);
         this.color = checkColor(color);
         this.isPoisonous = isPoisonous;
+        slimeCount++;
     }//end full contr
 
     public Slime()
@@ -17,9 +19,15 @@ public class Slime extends Enemy
         super();
         color = "green";
         isPoisonous = false;
+        slimeCount++;
     }//end default
 
     //setters
+
+    public void resetSlimeCount()
+    {
+        slimeCount = 0;
+    }
 
     public void setColor(String color) {
         this.color = checkColor(color);

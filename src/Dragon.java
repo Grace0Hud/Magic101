@@ -4,6 +4,7 @@ public class Dragon extends Enemy
     boolean hasFire;
     String color;
     double wingspan;
+    static int dragonCount = 0;
     //constructors
     public Dragon(String name, String color, int might, int health, int movement, double speed, boolean isHostile, boolean hasFire, double wingspan)
     {
@@ -11,6 +12,7 @@ public class Dragon extends Enemy
         this.hasFire = hasFire;
         this.color = checkColor(color);
         this.wingspan = validateWingspan(wingspan);
+        dragonCount++;
     }//end full constr
     public Dragon()
     {
@@ -18,6 +20,7 @@ public class Dragon extends Enemy
         this.hasFire = true;
         this.color = null;
         this.wingspan = 0.0;
+        dragonCount++;
     }//default constr
     //getters
     public boolean getHasFire() {
@@ -33,6 +36,10 @@ public class Dragon extends Enemy
     }
     //setters
 
+    public void resetDragonCount()
+    {
+        dragonCount = 0;
+    }
     public void setHasFire(boolean hasFire) {
         this.hasFire = hasFire;
     }
