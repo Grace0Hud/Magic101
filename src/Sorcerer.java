@@ -62,6 +62,36 @@ public class Sorcerer
         }//end for
         return output;
     }//prints out a list of the things in the player's inventory
+    public ArrayList<String> getInventoryList()
+    {
+        return inventory;
+    }//gives actual inventory array
+
+    public String getName()
+{
+    return name;
+}//returns name
+    public int getPhysMight()
+    {
+        return physMight;
+    }//returns might
+
+    public double getMagicPower() {
+        return magicPower;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getMovement() {
+        return movement;
+    }
+
+    public boolean hasHeal() {
+        return hasHeal;
+    }
+
     //to string
     public String toString()
     {
