@@ -8,7 +8,7 @@ public class Slime extends Enemy
     public Slime(String name, int might, int health, int movement, double speed, boolean isHostile, String color, boolean isPoisonous)
     {
         super(name, might, health, movement, speed, isHostile);
-        this.color = color;
+        this.color = checkColor(color);
         this.isPoisonous = isPoisonous;
     }//end full contr
 
@@ -22,7 +22,7 @@ public class Slime extends Enemy
     //setters
 
     public void setColor(String color) {
-        this.color = color;
+        this.color = checkColor(color);
     }
 
     public void setPoisonous(boolean poisonous) {
@@ -47,7 +47,31 @@ public class Slime extends Enemy
         }
         return 0;
     }//end poison attack
-
+    private String checkColor(String color)
+    {
+        boolean valid = false;
+        while(!valid)
+        {
+            if(color.equalsIgnoreCase("green"))
+            {
+                valid = true;
+            }
+            else if(color.equalsIgnoreCase("blue"))
+            {
+                valid = true;
+            }
+            else if(color.equalsIgnoreCase("yellow"))
+            {
+                valid = true;
+            }
+            else
+            {
+                System.out.println("Invalid color, please try again.");
+                color = scan.next();
+            }
+        }
+        return color;
+    }
     //toString
     public String toString()
     {

@@ -48,23 +48,23 @@ public class MagicDriver
         //print out the object via toString
        // System.out.println(happy.toString());
        // System.out.println(nobody.toString());
-        //System.out.println(george.toString());
+        System.out.println(george.toString());
         //System.out.println(drac.toString());
         //System.out.println(nobody3.toString());
         //System.out.println(somebody.toString());
         //System.out.println("Nobody has been given a name! It's " + nobody.getName());
-        System.out.println(me.toString());
-        System.out.println(healer.toString());
-        System.out.println(nobody4.toString());
+        //System.out.println(me.toString());
+       // System.out.println(healer.toString());
+        //System.out.println(nobody4.toString());
 
         //nobody.setMight(10);
         //drac.setLevel(5);
         //System.out.println(drac.toString());
-
+        george.setColor("purple");
         //testing attack mechanic
 
-        happy.setHealth(happy.getHealth() - me.attack(1, "magic"));
-        System.out.println(me.getName() + " is attacking " + happy.getName() + "! " + happy.getName() + " now has : " + happy.getHealth() + " health");
+       // happy.setHealth(happy.getHealth() - me.attack(1, "magic"));
+       // System.out.println(me.getName() + " is attacking " + happy.getName() + "! " + happy.getName() + " now has : " + happy.getHealth() + " health");
 
 
     }//end main method
