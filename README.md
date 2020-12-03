@@ -1,5 +1,5 @@
 # Advanced Java Topics with Android Studio - Magic101
-### Date started: 09/19/20 | Date finished: 09/24/20
+### Date started: 08/19/20 | Date finished: 08/24/20
 _____________________________________________________
 #### Assignment
   Review Java by creating a magic game that contains an enemy parent class with multiple children,
